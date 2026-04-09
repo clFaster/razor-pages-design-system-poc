@@ -1,0 +1,14 @@
+@model RazorTailwind.DesignSystem.ViewComponents.NavigationMenuViewModel
+
+<ds-container class="rtds-nav-shell">
+    <a href="/" class="rtds-brand">@Model.ProductName</a>
+
+    <div class="rtds-nav-links">
+        @foreach (var item in Model.Items)
+        {
+            <a href="@item.Href" class="rtds-nav-link @(item.IsActive ? "is-active" : string.Empty)">
+                @item.Label
+            </a>
+        }
+    </div>
+</ds-container>

@@ -1,0 +1,20 @@
+@model CardProps
+
+<article class="@Model.CssClasses">
+    @if (!string.IsNullOrWhiteSpace(Model.Eyebrow))
+    {
+        <p class="rtds-card-eyebrow">@Model.Eyebrow</p>
+    }
+
+    <h3 class="rtds-card-title">@Model.Title</h3>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Description))
+    {
+        <p class="rtds-card-description">@Model.Description</p>
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Model.Meta))
+    {
+        <p class="rtds-card-meta">@Model.Meta</p>
+    }
+</article>

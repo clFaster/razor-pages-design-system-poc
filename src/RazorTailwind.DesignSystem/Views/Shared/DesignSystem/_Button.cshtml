@@ -1,0 +1,16 @@
+@model ButtonProps
+
+@if (!string.IsNullOrWhiteSpace(Model.Href))
+{
+    <a href="@Model.Href"
+       class="@Model.CssClasses"
+       aria-disabled="@(Model.Disabled ? "true" : "false")">
+        @Model.Text
+    </a>
+}
+else
+{
+    <button type="@Model.Type" class="@Model.CssClasses" disabled="@Model.Disabled">
+        @Model.Text
+    </button>
+}
