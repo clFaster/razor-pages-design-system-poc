@@ -37,10 +37,30 @@ dotnet run --project src/razor-pages-demo/razor-pages-demo.csproj
 
 ## Useful commands
 
+Run full development workflow (recommended):
+
+Terminal 1:
+
+```bash
+npm run tw:watch:package
+```
+
+Terminal 2:
+
+```bash
+dotnet watch run --project src/razor-pages-demo/razor-pages-demo.csproj
+```
+
 Watch CSS while editing design-system styles:
 
 ```bash
 npm run tw:watch:package
+```
+
+Run app without hot reload:
+
+```bash
+dotnet run --project src/razor-pages-demo/razor-pages-demo.csproj
 ```
 
 Create NuGet package:

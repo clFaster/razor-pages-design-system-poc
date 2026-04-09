@@ -155,6 +155,24 @@ Watch mode:
 npm run tw:watch:package
 ```
 
+## 7.1) Best development loop
+
+Use two terminals from repository root:
+
+Terminal 1 (CSS watch):
+
+```bash
+npm run tw:watch:package
+```
+
+Terminal 2 (app with hot reload):
+
+```bash
+dotnet watch run --project src/razor-pages-demo/razor-pages-demo.csproj
+```
+
+This gives you fast feedback while editing both Razor files and design-system styles.
+
 ## 8) Package as NuGet
 
 From repository root:
