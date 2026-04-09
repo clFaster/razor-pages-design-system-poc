@@ -1,0 +1,13 @@
+@model InputProps
+
+<div class="@Model.WrapperClasses">
+    <label class="rtds-label" for="@Model.Id">@Model.Label</label>
+    <input id="@Model.Id"
+           name="@(Model.Name ?? Model.Id)"
+           type="@Model.Type"
+           class="@Model.InputClasses"
+           placeholder="@Model.Placeholder"
+           value="@Model.Value"
+           required="@Model.Required"
+           disabled="@Model.Disabled" />
+</div>

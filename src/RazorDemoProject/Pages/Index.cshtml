@@ -38,6 +38,29 @@
         Variant = ButtonVariant.Ghost,
     };
 
+    var firstNameInput = new InputProps
+    {
+        Id = "firstName",
+        Label = "First name",
+        Placeholder = "Ada",
+    };
+
+    var lastNameInput = new InputProps
+    {
+        Id = "lastName",
+        Label = "Last name",
+        Placeholder = "Lovelace",
+    };
+
+    var emailInput = new InputProps
+    {
+        Id = "email",
+        Label = "Work email",
+        Type = "email",
+        Placeholder = "ada@analytical.engine",
+        FullWidth = true,
+    };
+
     var cards = new[]
     {
         new CardProps
@@ -96,20 +119,9 @@
     <div class="rtds-section">
         <h2 class="rtds-section-title">Form example</h2>
         <form class="rtds-form">
-            <div class="rtds-form-field">
-                <label class="rtds-label" for="firstName">First name</label>
-                <input id="firstName" class="rtds-input" placeholder="Ada" />
-            </div>
-
-            <div class="rtds-form-field">
-                <label class="rtds-label" for="lastName">Last name</label>
-                <input id="lastName" class="rtds-input" placeholder="Lovelace" />
-            </div>
-
-            <div class="rtds-form-field rtds-form-field--full">
-                <label class="rtds-label" for="email">Work email</label>
-                <input id="email" type="email" class="rtds-input" placeholder="ada@analytical.engine" />
-            </div>
+            <partial name="DesignSystem/_InputField" model="firstNameInput" />
+            <partial name="DesignSystem/_InputField" model="lastNameInput" />
+            <partial name="DesignSystem/_InputField" model="emailInput" />
 
             <div class="rtds-form-field--full rtds-form-actions">
                 <partial name="DesignSystem/_Button" model="inviteButton" />

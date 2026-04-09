@@ -211,6 +211,10 @@
     @apply placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-100;
   }
 
+  .rtds-input.is-disabled {
+    @apply cursor-not-allowed bg-slate-100 text-slate-500;
+  }
+
   .rtds-form-actions {
     @apply flex flex-wrap items-center gap-3 pt-2;
   }
