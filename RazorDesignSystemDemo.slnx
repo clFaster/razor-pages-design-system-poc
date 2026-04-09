@@ -5,7 +5,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Folder Name="/src/">
-    <Project Path="src/razor-pages-demo/razor-pages-demo.csproj" />
+    <Project Path="src/RazorDemoProject/RazorDemoProject.csproj" />
     <Project Path="src/RazorTailwind.DesignSystem/RazorTailwind.DesignSystem.csproj" />
   </Folder>
 </Solution>
