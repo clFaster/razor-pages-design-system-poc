@@ -21,12 +21,16 @@
 }
 
 @layer components {
+  .rtds-body {
+    @apply min-h-screen flex flex-col;
+  }
+
   .rtds-container {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
   }
 
   .rtds-main {
-    @apply py-10;
+    @apply flex-1 py-10;
   }
 
   .rtds-site-header {
@@ -87,6 +91,14 @@
 
   .rtds-section-title {
     @apply mb-5 text-2xl font-semibold text-slate-900;
+  }
+
+  .rtds-title-xl {
+    @apply text-3xl font-semibold text-slate-900;
+  }
+
+  .rtds-text-muted {
+    @apply text-sm leading-7 text-slate-600;
   }
 
   .rtds-grid {

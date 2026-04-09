@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./src/RazorTailwind.DesignSystem/**/*.{cshtml,cs}",
-    "./src/razor-pages-demo/Pages/**/*.{cshtml,cshtml.cs}",
+    "./src/**/Pages/**/*.{cshtml,cshtml.cs}",
   ],
   theme: {
     extend: {

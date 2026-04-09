@@ -12,7 +12,7 @@ It demonstrates a practical architecture:
 
 ## Projects
 
-- `src/razor-pages-demo` - demo web app
+- `src/RazorDemoProject` - demo web app
 - `src/RazorTailwind.DesignSystem` - reusable design system package
 
 ## Quick start
@@ -32,7 +32,7 @@ npm run tw:build:package
 3. Run the demo app:
 
 ```bash
-dotnet run --project src/razor-pages-demo/razor-pages-demo.csproj
+dotnet run --project src/RazorDemoProject/RazorDemoProject.csproj
 ```
 
 ## Useful commands
@@ -48,7 +48,7 @@ npm run tw:watch:package
 Terminal 2:
 
 ```bash
-dotnet watch run --project src/razor-pages-demo/razor-pages-demo.csproj
+dotnet watch run --project src/RazorDemoProject/RazorDemoProject.csproj
 ```
 
 Watch CSS while editing design-system styles:
@@ -60,7 +60,7 @@ npm run tw:watch:package
 Run app without hot reload:
 
 ```bash
-dotnet run --project src/razor-pages-demo/razor-pages-demo.csproj
+dotnet run --project src/RazorDemoProject/RazorDemoProject.csproj
 ```
 
 Create NuGet package:

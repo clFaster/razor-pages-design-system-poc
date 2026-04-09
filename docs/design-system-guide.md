@@ -14,7 +14,7 @@ You will learn:
 
 The solution has two parts:
 
-1. **App project** (`src/razor-pages-demo`) - the demo website.
+1. **App project** (`src/RazorDemoProject`) - the demo website.
 2. **Razor Class Library** (`src/RazorTailwind.DesignSystem`) - the reusable design system.
 
 The app references the class library.
@@ -37,11 +37,11 @@ Use this simple rule:
 
 ### App project
 
-- `src/razor-pages-demo/Program.cs` registers the design system and navigation items.
-- `src/razor-pages-demo/Pages/Shared/_Layout.cshtml` uses shared shell pieces.
-- `src/razor-pages-demo/Pages/Shared/LayoutParts/_SiteHeader.cshtml` renders the navbar view component.
-- `src/razor-pages-demo/Pages/Shared/LayoutParts/_SiteFooter.cshtml` is a reusable footer partial.
-- `src/razor-pages-demo/Pages/Index.cshtml` shows component usage.
+- `src/RazorDemoProject/Program.cs` registers the design system and navigation items.
+- `src/RazorDemoProject/Pages/Shared/_Layout.cshtml` uses shared shell pieces.
+- `src/RazorDemoProject/Pages/Shared/LayoutParts/_SiteHeader.cshtml` renders the navbar view component.
+- `src/RazorDemoProject/Pages/Shared/LayoutParts/_SiteFooter.cshtml` is a reusable footer partial.
+- `src/RazorDemoProject/Pages/Index.cshtml` shows component usage.
 
 ### Design system library (RCL)
 
@@ -113,7 +113,7 @@ The menu highlights the active item based on current URL.
 
 ## 5) Register and configure the design system
 
-In `src/razor-pages-demo/Program.cs`:
+In `src/RazorDemoProject/Program.cs`:
 
 ```csharp
 using RazorTailwind.DesignSystem;
@@ -168,7 +168,7 @@ npm run tw:watch:package
 Terminal 2 (app with hot reload):
 
 ```bash
-dotnet watch run --project src/razor-pages-demo/razor-pages-demo.csproj
+dotnet watch run --project src/RazorDemoProject/RazorDemoProject.csproj
 ```
 
 This gives you fast feedback while editing both Razor files and design-system styles.
@@ -235,9 +235,9 @@ Inside RCL:
 
 Inside app:
 
-- `src/razor-pages-demo/Pages/Shared/_Layout.cshtml` - app shell
-- `src/razor-pages-demo/Pages/Shared/LayoutParts/` - header/footer partials
-- `src/razor-pages-demo/Pages/*.cshtml` - page content using design system components
+- `src/RazorDemoProject/Pages/Shared/_Layout.cshtml` - app shell
+- `src/RazorDemoProject/Pages/Shared/LayoutParts/` - header/footer partials
+- `src/RazorDemoProject/Pages/*.cshtml` - page content using design system components
 
 ## 11) Simple decision checklist
 
