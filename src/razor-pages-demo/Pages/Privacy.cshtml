@@ -1,0 +1,15 @@
+@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<section class="rtds-simple-card">
+    <partial name="DesignSystem/_Badge"
+             model='new BadgeProps { Text = "Legal", Tone = BadgeTone.Warning }' />
+
+    <h1 class="text-3xl font-semibold text-slate-900">@ViewData["Title"]</h1>
+    <p class="text-sm leading-7 text-slate-600">
+        Use this page to describe how your application handles personal data, cookies, and retention.
+    </p>
+</section>

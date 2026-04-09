@@ -1,0 +1,122 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Tailwind Design System Demo";
+
+    var createButton = new ButtonProps
+    {
+        Text = "Create workspace",
+        Href = "#",
+        Variant = ButtonVariant.Primary,
+        Size = ButtonSize.Large,
+    };
+
+    var docsButton = new ButtonProps
+    {
+        Text = "Read docs",
+        Href = "https://learn.microsoft.com/aspnet/core/razor-pages/",
+        Variant = ButtonVariant.Secondary,
+    };
+
+    var deleteButton = new ButtonProps
+    {
+        Text = "Delete",
+        Variant = ButtonVariant.Danger,
+        Size = ButtonSize.Small,
+    };
+
+    var inviteButton = new ButtonProps
+    {
+        Text = "Send invite",
+        Type = "submit",
+        Variant = ButtonVariant.Primary,
+    };
+
+    var cancelButton = new ButtonProps
+    {
+        Text = "Cancel",
+        Variant = ButtonVariant.Ghost,
+    };
+
+    var cards = new[]
+    {
+        new CardProps
+        {
+            Eyebrow = "Component",
+            Title = "Button",
+            Description = "Supports variants, sizes, links, and disabled state from one model.",
+            Meta = "Variants: Primary, Secondary, Ghost, Danger",
+            Tone = CardTone.Brand,
+        },
+        new CardProps
+        {
+            Eyebrow = "Component",
+            Title = "Badge",
+            Description = "Works well for labels like status, plan tiers, and feature flags.",
+            Meta = "Tones: Neutral, Brand, Success, Warning",
+        },
+        new CardProps
+        {
+            Eyebrow = "Pattern",
+            Title = "Form building blocks",
+            Description = "Use utility classes and components together to keep forms visually consistent.",
+            Meta = "Composes with ds-label and ds-input",
+        },
+    };
+}
+
+<section>
+    <div class="rtds-hero">
+        <partial name="DesignSystem/_Badge"
+                 model='new BadgeProps { Text = "Tailwind + Razor", Tone = BadgeTone.Brand }' />
+
+        <h1 class="rtds-hero-title">Reusable components for Razor Pages</h1>
+        <p class="rtds-hero-text">
+            This demo shows a practical setup: partials for visual components, a view component for dynamic navigation,
+            and shared Tailwind styles from a Razor Class Library.
+        </p>
+
+        <div class="rtds-actions">
+            <partial name="DesignSystem/_Button" model="createButton" />
+            <partial name="DesignSystem/_Button" model="docsButton" />
+            <partial name="DesignSystem/_Button" model="deleteButton" />
+        </div>
+    </div>
+
+    <div class="rtds-section">
+        <h2 class="rtds-section-title">Component catalog</h2>
+        <div class="rtds-grid">
+            @foreach (var card in cards)
+            {
+                <partial name="DesignSystem/_Card" model="card" />
+            }
+        </div>
+    </div>
+
+    <div class="rtds-section">
+        <h2 class="rtds-section-title">Form example</h2>
+        <form class="rtds-form">
+            <div class="rtds-form-field">
+                <label class="rtds-label" for="firstName">First name</label>
+                <input id="firstName" class="rtds-input" placeholder="Ada" />
+            </div>
+
+            <div class="rtds-form-field">
+                <label class="rtds-label" for="lastName">Last name</label>
+                <input id="lastName" class="rtds-input" placeholder="Lovelace" />
+            </div>
+
+            <div class="rtds-form-field rtds-form-field--full">
+                <label class="rtds-label" for="email">Work email</label>
+                <input id="email" type="email" class="rtds-input" placeholder="ada@analytical.engine" />
+            </div>
+
+            <div class="rtds-form-field--full rtds-form-actions">
+                <partial name="DesignSystem/_Button" model="inviteButton" />
+                <partial name="DesignSystem/_Button" model="cancelButton" />
+                <partial name="DesignSystem/_Badge"
+                         model='new BadgeProps { Text = "Live preview", Tone = BadgeTone.Success }' />
+            </div>
+        </form>
+    </div>
+</section>
