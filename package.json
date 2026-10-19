@@ -7,6 +7,6 @@
     "tw:watch:package": "tailwindcss -c ./tailwind.package.config.js -i ./src/RazorTailwind.DesignSystem/Styles/design-system.tailwind.css -o ./src/RazorTailwind.DesignSystem/wwwroot/css/razor-tailwind-design-system.css --watch"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.3.3"
   }
 }
